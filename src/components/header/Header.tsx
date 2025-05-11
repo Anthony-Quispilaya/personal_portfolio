@@ -2,7 +2,6 @@
 
 import React from "react";
 import TypewriterEffect from "../typewriter/TypewriterEffect";
-import HeaderContent from "./HeaderContent";
 import ProfilePhoto from "./ProfilePhoto";
 import ClientOnly from "../ui/ClientOnly";
 
@@ -24,7 +23,7 @@ export default function Header() {
   const rotatingWords = ["digital", "meaningful", "interactive"];
   
   return (
-    <header className="w-full flex flex-col items-center py-8 relative">
+    <header className="w-full flex items-center justify-center min-h-[1000px] relative">
       <div className="w-full max-w-full px-4">
         <ClientOnly>
           <TypewriterEffect 
@@ -32,14 +31,6 @@ export default function Header() {
             rotatingWords={rotatingWords}
           />
         </ClientOnly>
-        
-        <HeaderContent 
-          name="Anthony Quispilaya"
-          tagline="Empowering solutions, inspiring change."
-          role="Heroic Full Stack Developer"
-          buttonText="See My Work"
-          buttonHref="#projects"
-        />
       </div>
       
       <ProfilePhoto />

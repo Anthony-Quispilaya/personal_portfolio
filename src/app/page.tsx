@@ -12,9 +12,13 @@ export default function Home() {
     <ClientOnly>
       <div className="flex flex-col items-center min-h-screen navbar-bg-color text-white">
         <Nav />
-        <Header />
-        <main className="flex flex-col items-center w-full gap-12 px-4">
-          <About />
+        <div className="relative w-full">
+          <Header />
+          <div className="absolute bottom-0 w-full">
+            <About />
+          </div>
+        </div>
+        <main className="flex flex-col items-center w-full gap-24 px-4 mt-24">
           <Projects />
           <Resume />
           <Contact />
