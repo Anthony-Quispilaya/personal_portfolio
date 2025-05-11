@@ -110,9 +110,9 @@ ${formData.message}
             name="subject"
             value={formData.subject}
             onChange={handleChange}
-            required
             className="w-full px-4 py-3 bg-[#1a1a1a] border border-white/20 rounded-lg focus:outline-none focus:border-[#ff2828] text-white placeholder-gray-500 text-base transition-colors duration-200"
-            placeholder="What's this about?"
+            placeholder="What&apos;s this about?"
+            required
           />
         </div>
 
