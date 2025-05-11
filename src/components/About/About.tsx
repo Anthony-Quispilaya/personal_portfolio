@@ -37,7 +37,7 @@ export default function About() {
                   playsInline
                   className="w-full h-full object-cover"
                 >
-                  <source src="/videos/code.webm" type="video/webm" />
+                  <source src="/videos/peru.webm" type="video/webm" />
                   Your browser does not support the video tag.
                 </video>
               </div>
@@ -49,7 +49,7 @@ export default function About() {
                   playsInline
                   className="w-full h-full object-cover"
                 >
-                  <source src="/videos/peru.webm" type="video/webm" />
+                  <source src="/videos/code.webm" type="video/webm" />
                   Your browser does not support the video tag.
                 </video>
               </div>
