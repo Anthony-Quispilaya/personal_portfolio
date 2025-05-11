@@ -14,11 +14,9 @@ export default function Home() {
         <Nav />
         <div className="relative w-full">
           <Header />
-          <div className="absolute bottom-0 w-full">
-            <About />
-          </div>
+          <About />
         </div>
-        <main className="flex flex-col items-center w-full gap-24 px-4 mt-24">
+        <main className="flex flex-col items-center w-full gap-32 px-4 mt-32">
           <Projects />
           <Resume />
           <Contact />

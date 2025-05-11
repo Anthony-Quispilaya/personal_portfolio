@@ -23,17 +23,20 @@ export default function Header() {
   const rotatingWords = ["digital", "meaningful", "interactive"];
   
   return (
-    <header className="w-full flex items-center justify-center min-h-[1000px] relative">
-      <div className="w-full max-w-full px-4">
-        <ClientOnly>
-          <TypewriterEffect 
-            staticTexts={staticTexts}
-            rotatingWords={rotatingWords}
-          />
-        </ClientOnly>
+    <header className="w-full mt-30 flex items-center justify-center min-h-[400px] relative">
+      <div className="w-full max-w-7xl mx-auto px-4 flex items-center gap-8">
+        <div className="w-2/3">
+          <ClientOnly>
+            <TypewriterEffect 
+              staticTexts={staticTexts}
+              rotatingWords={rotatingWords}
+            />
+          </ClientOnly>
+        </div>
+        <div className="w-1/3 flex justify-end">
+          <ProfilePhoto />
+        </div>
       </div>
-      
-      <ProfilePhoto />
     </header>
   );
 } 
