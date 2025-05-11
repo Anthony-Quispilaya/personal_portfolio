@@ -1,11 +1,18 @@
-import React from "react";
+"use client";
+
+import React from 'react';
+import ContactForm from './contact/contact';
 
 export default function Contact() {
   return (
-    <section className="w-full max-w-2xl mx-auto py-8">
-      <h2 className="text-3xl font-semibold mb-4">Contact</h2>
-      <p className="text-gray-700 mb-2">Feel free to reach out to me at:</p>
-      <a href="mailto:your.email@example.com" className="text-blue-600 underline">your.email@example.com</a>
+    <section className="w-full py-16 px-4 bg-[#111111]" id="contact">
+      <div className="max-w-4xl mx-auto">
+        <h2 className="text-4xl font-bold mb-8 text-center text-[#ff2828]">Contact Me</h2>
+        <p className="text-center text-white mb-12 max-w-2xl mx-auto">
+          Have a question or want to work together? Feel free to reach out!
+        </p>
+        <ContactForm />
+      </div>
     </section>
   );
 }
