@@ -6,10 +6,12 @@ import "./volleyball.css";
 
 export default function About() {
   return (
-    <section id="about" className="w-full py-32 mt-32">
+    <section id="about" className="w-full py-32">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="bg-white/5 backdrop-blur-sm rounded-lg p-12 border border-white/20 max-w-6xl shadow-xl">
-          <h2 className="text-4xl font-bold text-white mb-12 text-center tracking-tight transition-transform duration-300 hover:scale-110">About Me</h2>
+        <div className="bg-white/5 backdrop-blur-sm rounded-lg p-12 border border-white/20 max-w-7xl mx-auto shadow-xl">
+          <h2 className="text-4xl font-bold text-white mb-12 text-center tracking-tight transition-transform duration-300 hover:scale-110">
+            About Me
+          </h2>
           <div className="flex flex-col lg:flex-row gap-12 items-start">
             <div className="text-gray-300 leading-relaxed max-w-2xl space-y-6">
               <p className="text-lg transition-transform duration-300 hover:scale-105">
