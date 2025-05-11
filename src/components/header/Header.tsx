@@ -11,7 +11,7 @@ import "../typewriter/typewriter.css";
 export default function Header() {
   // Static texts for the typewriter effect
   const staticTexts = {
-    line1Part1: "Hi, I&apos;m ",
+    line1Part1: "Hi, I'm ",
     line1Part2: "Anthony",
     line2Part1: "Aspiring ",
     line2Part2: "Web Developer",
