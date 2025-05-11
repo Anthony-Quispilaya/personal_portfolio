@@ -13,7 +13,7 @@ export default function About() {
             responsive and user-friendly web applications that solve real-world problems.
           </p>
           <p className="text-gray-300 leading-relaxed mt-4">
-            When I'm not coding, you can find me exploring new technologies, contributing to 
+            When I&apos;m not coding, you can find me exploring new technologies, contributing to 
             open-source projects, or learning new programming languages. I believe in continuous 
             learning and staying up-to-date with the latest web development trends and best practices.
           </p>
