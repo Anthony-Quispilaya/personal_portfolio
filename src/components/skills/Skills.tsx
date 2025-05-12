@@ -1,6 +1,7 @@
 "use client";
 
 import React from 'react';
+import Image from 'next/image';
 
 const Skills = () => {
   const skills = {
@@ -54,10 +55,12 @@ const Skills = () => {
                       key={`${skill.name}-${index}`}
                       className="skill-card flex flex-col items-center gap-4"
                     >
-                      <img 
-                        src={skill.icon} 
-                        alt={`${skill.name} icon`} 
-                        className="w-[150px] h-[150px] object-contain"
+                      <Image
+                        src={skill.icon}
+                        alt={skill.name}
+                        width={48}
+                        height={48}
+                        className="w-12 h-12"
                       />
                       <span className="text-white font-bold text-center text-xl">{skill.name}</span>
                     </div>
@@ -75,10 +78,12 @@ const Skills = () => {
                       key={`${skill.name}-${index}`}
                       className="skill-card flex flex-col items-center gap-4"
                     >
-                      <img 
-                        src={skill.icon} 
-                        alt={`${skill.name} icon`} 
-                        className="w-[150px] h-[150px] object-contain"
+                      <Image
+                        src={skill.icon}
+                        alt={skill.name}
+                        width={48}
+                        height={48}
+                        className="w-12 h-12"
                       />
                       <span className="text-white font-bold text-center text-xl">{skill.name}</span>
                     </div>
@@ -96,10 +101,12 @@ const Skills = () => {
                       key={`${skill.name}-${index}`}
                       className="skill-card flex flex-col items-center gap-4"
                     >
-                      <img 
-                        src={skill.icon} 
-                        alt={`${skill.name} icon`} 
-                        className="w-[150px] h-[150px] object-contain"
+                      <Image
+                        src={skill.icon}
+                        alt={skill.name}
+                        width={48}
+                        height={48}
+                        className="w-12 h-12"
                       />
                       <span className="text-white font-bold text-center text-xl">{skill.name}</span>
                     </div>

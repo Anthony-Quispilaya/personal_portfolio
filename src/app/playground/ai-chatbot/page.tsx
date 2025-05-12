@@ -5,18 +5,9 @@ import { FaPaperPlane, FaPlus, FaTrash } from 'react-icons/fa';
 import Script from 'next/script';
 
 // Add type declaration for dotlottie-player
-declare global {
-  namespace JSX {
-    interface IntrinsicElements {
-      'dotlottie-player': React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & {
-        src: string;
-        background?: string;
-        speed?: string | number;
-        loop?: boolean;
-        autoplay?: boolean;
-      };
-    }
-  }
+interface DotLottiePlayer extends HTMLElement {
+  src: string;
+  style: CSSStyleDeclaration;
 }
 
 interface Message {
@@ -307,8 +298,9 @@ export default function AIChatbot() {
           <div className="flex-1 flex flex-col items-center justify-center text-white/60">
             {/* Robot Character - Centered when no conversation */}
             <RobotCharacter size="medium" />
-            <p className="mt-4 text-lg">Hi! I'm Nova, and I'm not saying I'm Batman... 😎</p>
-            <p className="mt-2">(I'm just saying no one has ever seen me and Batman in the same room)</p>
+            <div className="text-center text-gray-300 text-lg">
+              Hi! I&apos;m Nova, and I&apos;m not saying I&apos;m Batman... 😎
+            </div>
             <p className="mt-4">Start a new conversation and prepare for some dad jokes! 🤓</p>
           </div>
         )}

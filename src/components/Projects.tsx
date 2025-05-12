@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { FaGithub } from "react-icons/fa";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
+import Image from 'next/image';
 
 interface Project {
   title: string;
@@ -39,21 +40,21 @@ const PlaygroundIcon = () => (
 const getTechIcon = (tech: string) => {
   switch (tech) {
     case "HTML":
-      return <img src="/icons/html5.svg" alt="HTML5" className="w-5 h-5" />;
+      return <Image src="/icons/html5.svg" alt="HTML5" width={20} height={20} className="w-5 h-5" />;
     case "CSS":
-      return <img src="/icons/css3.svg" alt="CSS3" className="w-5 h-5" />;
+      return <Image src="/icons/css3.svg" alt="CSS3" width={20} height={20} className="w-5 h-5" />;
     case "JavaScript":
-      return <img src="/icons/javascript.svg" alt="JavaScript" className="w-5 h-5" />;
+      return <Image src="/icons/javascript.svg" alt="JavaScript" width={20} height={20} className="w-5 h-5" />;
     case "Bootstrap":
-      return <img src="/icons/bootstrap.svg" alt="Bootstrap" className="w-5 h-5" />;
+      return <Image src="/icons/bootstrap.svg" alt="Bootstrap" width={20} height={20} className="w-5 h-5" />;
     case "Next.js":
-      return <img src="/icons/nextjs.svg" alt="Next.js" className="w-5 h-5" />;
+      return <Image src="/icons/nextjs.svg" alt="Next.js" width={20} height={20} className="w-5 h-5" />;
     case "TypeScript":
-      return <img src="/icons/typescript.svg" alt="TypeScript" className="w-5 h-5" />;
+      return <Image src="/icons/typescript.svg" alt="TypeScript" width={20} height={20} className="w-5 h-5" />;
     case "Tailwind CSS":
-      return <img src="/icons/tailwind.svg" alt="Tailwind CSS" className="w-5 h-5" />;
+      return <Image src="/icons/tailwind.svg" alt="Tailwind CSS" width={20} height={20} className="w-5 h-5" />;
     case "OpenAI API":
-      return <img src="/icons/openai.svg" alt="OpenAI API" className="w-5 h-5" />;
+      return <Image src="/icons/openai.svg" alt="OpenAI API" width={20} height={20} className="w-5 h-5" />;
     default:
       return null;
   }
@@ -113,9 +114,11 @@ const Carousel = ({ images }: { images: string[] }) => {
     <div className="relative w-full h-full group">
       {/* Main Image */}
       <div className="w-full h-full overflow-hidden rounded-lg flex items-start justify-center bg-black/20">
-        <img
+        <Image
           src={images[currentIndex]}
           alt={`Screenshot ${currentIndex + 1}`}
+          width={800}
+          height={450}
           className="w-auto h-auto max-w-full max-h-full"
         />
       </div>
