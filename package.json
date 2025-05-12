@@ -10,7 +10,9 @@
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
+    "lottie-react": "^2.4.1",
     "next": "15.3.1",
+    "openai": "^4.98.0",
     "postcss": "^8.5.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",

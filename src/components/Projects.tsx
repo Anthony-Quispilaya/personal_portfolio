@@ -46,6 +46,14 @@ const getTechIcon = (tech: string) => {
       return <img src="/icons/javascript.svg" alt="JavaScript" className="w-5 h-5" />;
     case "Bootstrap":
       return <img src="/icons/bootstrap.svg" alt="Bootstrap" className="w-5 h-5" />;
+    case "Next.js":
+      return <img src="/icons/nextjs.svg" alt="Next.js" className="w-5 h-5" />;
+    case "TypeScript":
+      return <img src="/icons/typescript.svg" alt="TypeScript" className="w-5 h-5" />;
+    case "Tailwind CSS":
+      return <img src="/icons/tailwind.svg" alt="Tailwind CSS" className="w-5 h-5" />;
+    case "OpenAI API":
+      return <img src="/icons/openai.svg" alt="OpenAI API" className="w-5 h-5" />;
     default:
       return null;
   }
@@ -72,6 +80,14 @@ const volleyballScreenshots = [
   "/images/project-screenshots/project3/5.png",
   "/images/project-screenshots/project3/6.png",
   "/images/project-screenshots/project3/7.png",
+];
+
+const aiChatbotScreenshots = [
+  "/images/project-screenshots/project2/1.png",
+  "/images/project-screenshots/project2/2.png",
+  "/images/project-screenshots/project2/3.png",
+  "/images/project-screenshots/project2/4.png",
+  "/images/project-screenshots/project2/5.png",
 ];
 
 const Carousel = ({ images }: { images: string[] }) => {
@@ -144,7 +160,7 @@ const projects: Project[] = [
   },
   {
     title: "AI Chatbot",
-    description: "A modern AI-powered chatbot built with OpenAI's API. Features natural language processing, context awareness, and a sleek user interface.",
+    description: "A modern AI-powered chatbot built with OpenAI's API. Features natural language processing, context awareness, and a sleek user interface. The chatbot has a unique personality that loves dad jokes and embraces its cringy side!",
     githubUrl: "https://github.com/yourusername/project2",
     playgroundUrl: "/playground/ai-chatbot",
     technologies: ["Next.js", "OpenAI API", "TypeScript", "Tailwind CSS"]
@@ -216,11 +232,7 @@ export default function Projects() {
                       ) : project.title === "Basic Volleyball Website" ? (
                         <Carousel images={volleyballScreenshots} />
                       ) : project.title === "AI Chatbot" ? (
-                        <img 
-                          src="/images/project-screenshots/ai-chatbot.png" 
-                          alt="AI Chatbot Screenshot" 
-                          className="w-full h-full object-contain"
-                        />
+                        <Carousel images={aiChatbotScreenshots} />
                       ) : (
                         <div className="w-full h-full bg-white/5 flex items-center justify-center">
                           <span className="text-gray-400">Screenshot coming soon</span>
