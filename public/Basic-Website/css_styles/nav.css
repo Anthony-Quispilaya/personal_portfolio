@@ -1,0 +1,98 @@
+/* DEVELOPER: Anthony Quispilaya, IS117-003, Fall 2024 */
+/* Navbar Styling */
+.navbar {
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+    height: 80px;
+}
+
+.navbar-logo {
+    max-height: 80px;
+}
+
+.navbar-links {
+    display: flex;
+    justify-content: space-evenly;
+    width: 70%;
+    margin: auto;
+}
+
+.navbar-links li {
+    list-style: none;
+    padding: 0% 8%;
+}
+
+.navbar-links a {
+    color: white;
+    text-decoration: none;
+}
+
+.navbar-nav li:hover {
+    transition: transform 0.3s ease;
+}
+
+.navbar-nav li:hover {
+    transform: scale(1.1);
+}
+
+.navbar-nav li:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.dropdown-menu {
+    width: 100%;
+}
+
+.dropdown-menu .dropdown-item {
+    width: 100%;
+    text-align: center;
+}
+
+.dropdown-menu li {
+    margin: 0;
+}
+
+.dropdown-menu .dropdown-item:hover {
+    background-color: rgba(255, 255, 0, 0) !important;
+}
+
+.navbar-collapse {
+    width: 100%; /* Ensures it spans the full width */
+}
+/* END - Navbar Styling */
+
+/* Footer Styling */
+footer {
+    color: white;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    margin-top: 2rem;
+}
+/* END - Footer Styling */
+
+/* Responsive Adjustments */
+@media (max-width: 700px) {
+    .navbar-nav {
+        display: none;
+    }
+
+    .navbar-toggler {
+        display: block;
+    }
+}
+
+@media (min-width: 701px) {
+    .navbar-nav {
+        display: flex;
+    }
+
+    .navbar-toggler {
+        display: none;
+    }
+}
+
+@media (max-width: 701px) {
+    #main_content {
+        margin-bottom: 2rem !important;
+    }
+}

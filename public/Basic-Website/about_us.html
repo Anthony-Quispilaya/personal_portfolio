@@ -1,0 +1,88 @@
+<!-- DEVELOPER: Anthony Quispilaya, IS117-003, Fall 2024 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>About Us</title>
+    <link rel="icon"  href="/images/logo.png">
+    <!-- CSS only -->
+    <link href="css_styles/nav.css" rel="stylesheet">
+    <link href="css_styles/about_us.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+          crossorigin="anonymous">
+</head>
+
+<body>
+    <!-- Fluid Navigation Bar -->
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+            <!-- Logo -->
+            <div class="d-flex align-items-start">
+                <a href="index.html">
+                    <img src="images/logo.png" alt="Logo" title="Logo" class="img-fluid navbar-logo float-start me-3">
+                </a>
+            </div>
+            <!-- Links -->
+            <div class="collapse navbar-collapse bg-dark" id="mynavbar">
+                <ul class="navbar-nav mx-auto navbar-links" id="sub_menu">
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="about_us.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="events.html">Events</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown">Contact</a>
+                        <ul class="dropdown-menu bg-dark" id="sub_menu">
+                            <li><a class="dropdown-item text-white" href="contact.html">Contact Us</a></li>
+                            <li><a class="dropdown-item text-white" href="https://maps.app.goo.gl/nr2WgYZH6GTzBeS76" target="_blank">Location</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <!-- Search Bar -->
+                <form class="d-flex ms-auto">
+                    <input class="form-control me-2" type="text" placeholder="Search">
+                    <button class="btn btn-primary" type="submit">Search</button>
+                </form>
+            </div>
+            <!-- Toggler for Small Screens -->
+            <button class="navbar-toggler bg-dark" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Fluid Main Content -->
+    <div id = main_content>
+        <div class="container-fluid mt-3" id="aboutus_text">
+            <h1>About Us:</h1>
+        </div>
+
+        <!-- Text -->
+        <div class="container-fluid mt-3" id="whoarewe_text">
+            <div class="information_text">
+                <h2>Who Are We?</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis orci sem, ultrices at porta id, fringilla at ipsum. Quisque et magna ut nisi semper laoreet. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vivamus consequat mollis maximus. Etiam varius volutpat justo. Nam sed interdum dui. Etiam scelerisque consequat velit, id faucibus tellus. Sed id odio finibus, luctus enim non, tincidunt lectus. Praesent sapien velit, lobortis nec justo ut, imperdiet pharetra metus. Mauris tristique semper orci nec laoreet. Nullam commodo augue facilisis lectus tincidunt ultrices.</p>
+                <p>Quisque lacus nunc, imperdiet non maximus nec, imperdiet vitae felis. Donec varius enim in consectetur consequat. Integer ut aliquet neque. Aenean et velit in lectus volutpat elementum. Mauris nec est dolor. Proin aliquam rhoncus tellus, ultrices eleifend mi blandit in. Integer nec lacus risus. Sed eu finibus leo. Aliquam erat volutpat. Vivamus finibus nulla justo, sit amet accumsan libero porta a. Cras placerat in ex non pulvinar. Praesent at tincidunt lectus. Duis ac arcu id augue faucibus sodales. Donec tristique molestie ipsum nec tristique. Donec nec dolor sed nisl consequat accumsan eget ac est. Duis venenatis libero quis nunc scelerisque, at auctor turpis aliquet.</p>
+                <p>Pellentesque viverra convallis eleifend. Nulla facilisi. Maecenas porta placerat odio, finibus imperdiet mauris suscipit vitae. Vestibulum ultricies semper justo, non volutpat mauris semper et. Sed ac tincidunt enim, nec congue mauris. Fusce ipsum lectus, consequat et sem sed, luctus pretium elit. Proin tempor id nulla lacinia finibus. Integer fringilla rutrum mauris, nec rutrum quam ultricies in. Etiam rhoncus tellus urna, eu faucibus sapien sollicitudin a. Nulla facilisi. Sed et pellentesque nisl. Donec molestie turpis et ante placerat, eu sodales nibh iaculis. Quisque interdum iaculis ligula ac eleifend. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Pellentesque nec risus nibh. Pellentesque ante metus, porttitor ut placerat nec, mollis quis mi.</p>
+            </div>
+        </div>
+        
+    </div>
+
+    <!-- Fluid Footer -->
+    <footer class="bg-dark text-white py-3 text-center">
+        <span>&copy; Anthony Quispilaya, 2024 | Terms Of Use | Privacy Statement</span>
+    </footer>
+
+    <!-- Javascript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous">
+    </script>
+
+</body>
+</html>
