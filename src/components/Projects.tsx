@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { FaGithub } from "react-icons/fa";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
+import Image from 'next/image';
 
 interface Project {
   title: string;
@@ -39,13 +40,21 @@ const PlaygroundIcon = () => (
 const getTechIcon = (tech: string) => {
   switch (tech) {
     case "HTML":
-      return <img src="/icons/html5.svg" alt="HTML5" className="w-5 h-5" />;
+      return <Image src="/icons/html5.svg" alt="HTML5" width={20} height={20} className="w-5 h-5" />;
     case "CSS":
-      return <img src="/icons/css3.svg" alt="CSS3" className="w-5 h-5" />;
+      return <Image src="/icons/css3.svg" alt="CSS3" width={20} height={20} className="w-5 h-5" />;
     case "JavaScript":
-      return <img src="/icons/javascript.svg" alt="JavaScript" className="w-5 h-5" />;
+      return <Image src="/icons/javascript.svg" alt="JavaScript" width={20} height={20} className="w-5 h-5" />;
     case "Bootstrap":
-      return <img src="/icons/bootstrap.svg" alt="Bootstrap" className="w-5 h-5" />;
+      return <Image src="/icons/bootstrap.svg" alt="Bootstrap" width={20} height={20} className="w-5 h-5" />;
+    case "Next.js":
+      return <Image src="/icons/nextjs.svg" alt="Next.js" width={20} height={20} className="w-5 h-5" />;
+    case "TypeScript":
+      return <Image src="/icons/typescript.svg" alt="TypeScript" width={20} height={20} className="w-5 h-5" />;
+    case "Tailwind CSS":
+      return <Image src="/icons/tailwind.svg" alt="Tailwind CSS" width={20} height={20} className="w-5 h-5" />;
+    case "OpenAI API":
+      return <Image src="/icons/openai.svg" alt="OpenAI API" width={20} height={20} className="w-5 h-5" />;
     default:
       return null;
   }
@@ -74,6 +83,14 @@ const volleyballScreenshots = [
   "/images/project-screenshots/project3/7.png",
 ];
 
+const aiChatbotScreenshots = [
+  "/images/project-screenshots/project2/1.png",
+  "/images/project-screenshots/project2/2.png",
+  "/images/project-screenshots/project2/3.png",
+  "/images/project-screenshots/project2/4.png",
+  "/images/project-screenshots/project2/5.png",
+];
+
 const Carousel = ({ images }: { images: string[] }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -97,9 +114,11 @@ const Carousel = ({ images }: { images: string[] }) => {
     <div className="relative w-full h-full group">
       {/* Main Image */}
       <div className="w-full h-full overflow-hidden rounded-lg flex items-start justify-center bg-black/20">
-        <img
+        <Image
           src={images[currentIndex]}
           alt={`Screenshot ${currentIndex + 1}`}
+          width={800}
+          height={450}
           className="w-auto h-auto max-w-full max-h-full"
         />
       </div>
@@ -144,7 +163,7 @@ const projects: Project[] = [
   },
   {
     title: "AI Chatbot",
-    description: "A modern AI-powered chatbot built with OpenAI's API. Features natural language processing, context awareness, and a sleek user interface.",
+    description: "A modern AI-powered chatbot built with OpenAI's API. Features natural language processing, context awareness, and a sleek user interface. The chatbot has a unique personality that loves dad jokes and embraces its cringy side!",
     githubUrl: "https://github.com/yourusername/project2",
     playgroundUrl: "/playground/ai-chatbot",
     technologies: ["Next.js", "OpenAI API", "TypeScript", "Tailwind CSS"]
@@ -216,11 +235,7 @@ export default function Projects() {
                       ) : project.title === "Basic Volleyball Website" ? (
                         <Carousel images={volleyballScreenshots} />
                       ) : project.title === "AI Chatbot" ? (
-                        <img 
-                          src="/images/project-screenshots/ai-chatbot.png" 
-                          alt="AI Chatbot Screenshot" 
-                          className="w-full h-full object-contain"
-                        />
+                        <Carousel images={aiChatbotScreenshots} />
                       ) : (
                         <div className="w-full h-full bg-white/5 flex items-center justify-center">
                           <span className="text-gray-400">Screenshot coming soon</span>

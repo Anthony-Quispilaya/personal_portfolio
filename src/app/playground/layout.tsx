@@ -1,12 +1,22 @@
+"use client";
+
 import React from 'react';
 import Link from 'next/link';
 import { FaArrowLeft } from 'react-icons/fa';
+import { usePathname } from 'next/navigation';
 
 export default function PlaygroundLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  const pathname = usePathname();
+  const projectTitle = pathname.includes('volleyball-website') 
+    ? 'Basic Volleyball Website'
+    : pathname.includes('ai-chatbot')
+    ? 'AI Chatbot'
+    : 'Project Playground';
+
   return (
     <div className="h-screen overflow-hidden bg-black text-white">
       {/* Navigation Bar */}
@@ -21,7 +31,7 @@ export default function PlaygroundLayout({
                 <FaArrowLeft className="w-5 h-5" />
                 <span>Back to Portfolio</span>
               </Link>
-              <span className="text-xl font-semibold transition-transform duration-200 hover:scale-105">Basic Volleyball Website</span>
+              <span className="text-xl font-semibold transition-transform duration-200 hover:scale-105">{projectTitle}</span>
             </div>
           </div>
         </div>
