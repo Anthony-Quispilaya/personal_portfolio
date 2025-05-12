@@ -1,0 +1,154 @@
+<!-- DEVELOPER: Anthony Quispilaya, IS117-003, Fall 2024 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Event Page</title>
+    <link rel="icon"  href="/images/logo.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- CSS only -->
+    <link href="css_styles/nav.css" rel="stylesheet">
+    <link href="css_styles/event_page.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+          crossorigin="anonymous">
+</head>
+
+<body>
+    <!-- Fluid Navigation Bar -->
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+            <!-- Logo -->
+            <div class="d-flex align-items-start">
+                <a href="index.html">
+                    <img src="images/logo.png" alt="Logo" title="Logo" class="img-fluid navbar-logo float-start me-3">
+                </a>
+            </div>
+            <!-- Links -->
+            <div class="collapse navbar-collapse bg-dark" id="mynavbar">
+                <ul class="navbar-nav mx-auto navbar-links" id="sub_menu">
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="about_us.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="events.html">Events</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown">Contact</a>
+                        <ul class="dropdown-menu bg-dark" id="sub_menu">
+                            <li><a class="dropdown-item text-white" href="contact.html">Contact Us</a></li>
+                            <li><a class="dropdown-item text-white" href="https://maps.app.goo.gl/nr2WgYZH6GTzBeS76" target="_blank">Location</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <!-- Search Bar -->
+                <form class="d-flex ms-auto">
+                    <input class="form-control me-2" type="text" placeholder="Search">
+                    <button class="btn btn-primary" type="submit">Search</button>
+                </form>
+            </div>
+            <!-- Toggler for Small Screens -->
+            <button class="navbar-toggler bg-dark" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Fluid Main Content -->
+    <div id = main_content>
+        <div class="container-fluid mt-3" id="aboutus_text">
+            <h1>(Name) Information:</h1>
+        </div>
+
+        <!-- 2 Columns -->
+        <div class="row mt-4" id="two_columns">
+            <!-- Column 1 with 1 Rows -->
+            <div id="column-1" class="col-md-4">
+                <!-- Row 1 in Column 1 -->
+                <div class="row">
+                    <div id="carouselExampleIndicators" class="carousel slide">
+                        <div class="carousel-indicators">
+                          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        </div>
+                        <div class="carousel-inner">
+                          <div class="carousel-item active">
+                            <img src="images/court1.jpg" class="d-block w-100" title="Image of volleyball court 1" alt="Image of volleyball court 1">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="images/court2.jpg" class="d-block w-100" title="Image of volleyball court 2" alt="Image of volleyball court 2">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="images/court3.jpg" class="d-block w-100" title="Image of volleyball court 3" alt="Image of volleyball court 3">
+                          </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Next</span>
+                        </button>
+                      </div>
+                </div>
+            </div> <!-- END - Column 1 with 1 Rows -->
+
+            <!-- Column 2 with 3 Rows -->
+            <div class="col-md-4 custom-column" id="column-3">
+                <!-- Row 1 in Column 2 -->
+                <div class="row">
+                    <div class="col">
+                        <div class ="p-3 bg-light round_border">
+                            <h3>Location</h3>
+                            <p>102 Iron Mountain Rd unit c</p>
+                            <p>Mine Hill Township, NJ 07803</p>
+                        </div>
+                    </div>
+                 </div>
+
+                <!-- Row 2 in Column 2 -->
+                <div class="row">
+                    <div class="col">
+                        <div class ="p-3 bg-light round_border">
+                            <h3>Time</h3>
+                            <h6>Monday-Friday</h6>
+                            <p>6:00pm - 9:30pm</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Row 3 in Column 2 -->
+                <div class="row">
+                    <div class="col">
+                        <div class ="p-3 bg-light round_border">
+                            <h3>Host</h3>
+                            <p>Riley Thompson</p>
+                        </div>
+                        <div>
+                            <a href="p1_more_info.html">
+                                <button class="btn btn-primary" style="float: right; margin-top: 10px">More Info</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div> <!-- END - Column 2 with 3 Rows -->
+
+        </div> <!-- END - 2 Columns-->
+    </div> <!-- END - Main Content -->
+
+    <!-- Fluid Footer -->
+    <footer class="bg-dark text-white py-3 text-center">
+        <span>&copy; Anthony Quispilaya, 2024 | Terms Of Use | Privacy Statement</span>
+    </footer>
+
+    <!-- Javascript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous">
+    </script>
+</body>
+</html>
