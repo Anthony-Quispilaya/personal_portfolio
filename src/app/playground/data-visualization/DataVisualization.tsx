@@ -120,7 +120,7 @@ export default function DataVisualization() {
         .attr("cy", d => yScale(d.level))
         .attr("r", 4)
         .attr("fill", colorScale(state))
-        .on("mouseover", function(event, d) {
+        .on("mouseover", function() {
           d3.select(this)
             .attr("r", 6)
             .attr("stroke", "#fff")

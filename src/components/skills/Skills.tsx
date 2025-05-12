@@ -3,7 +3,6 @@
 import React from 'react';
 import Image from 'next/image';
 import ScrollAnimation from "../ui/ScrollAnimation";
-import Parallax from "../ui/Parallax";
 import { skills } from "./skillsData";
 
 const Skills = () => {

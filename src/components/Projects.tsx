@@ -2,10 +2,8 @@
 
 import React from 'react';
 import Image from 'next/image';
-import Link from 'next/link';
 import { FaGithub } from 'react-icons/fa';
 import ScrollAnimation from './ui/ScrollAnimation';
-import Parallax from './ui/Parallax';
 import Carousel from './ui/Carousel';
 import { dataVizScreenshots, volleyballScreenshots, aiChatbotScreenshots } from '../data/projectScreenshots';
 
