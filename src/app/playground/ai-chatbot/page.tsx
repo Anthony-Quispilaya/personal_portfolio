@@ -73,6 +73,9 @@ export default function AIChatbot() {
     return conversations.find(conv => conv.id === currentConversationId);
   };
 
+  // Extract current messages into a variable for the dependency array
+  const currentMessages = getCurrentConversation()?.messages;
+
   // Auto-scroll to bottom when messages change
   useEffect(() => {
     if (chatContainerRef.current) {
@@ -81,7 +84,7 @@ export default function AIChatbot() {
         behavior: 'smooth'
       });
     }
-  }, [getCurrentConversation()?.messages]);
+  }, [currentMessages]);
 
   // Load conversations from localStorage on component mount
   useEffect(() => {
