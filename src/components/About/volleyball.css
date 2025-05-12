@@ -22,4 +22,74 @@
   top: 17%;
   left: 40%;
   will-change: transform;
+}
+
+/* DVD bounce animation */
+@keyframes dvd-bounce {
+  0% {
+    transform: translate(0, 0);
+  }
+  12.5% {
+    transform: translate(20px, 15px);
+  }
+  25% {
+    transform: translate(30px, -10px);
+  }
+  37.5% {
+    transform: translate(10px, -25px);
+  }
+  50% {
+    transform: translate(-15px, -15px);
+  }
+  62.5% {
+    transform: translate(-30px, 5px);
+  }
+  75% {
+    transform: translate(-20px, 25px);
+  }
+  87.5% {
+    transform: translate(0, 15px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+.dvd-bounce-container {
+  position: relative;
+  overflow: visible;
+  padding: 10px;
+  margin: -10px;
+}
+
+.dvd-bounce {
+  animation: dvd-bounce 12s linear infinite;
+  position: relative;
+  will-change: transform;
+  transform-origin: center center;
+}
+
+.dvd-bounce:hover {
+  animation-play-state: paused;
+}
+
+/* Different animation paths for each video */
+.dvd-bounce-1 {
+  animation-delay: 0s;
+  animation-duration: 10s;
+}
+
+.dvd-bounce-2 {
+  animation-delay: -3s;
+  animation-duration: 12s;
+}
+
+.dvd-bounce-3 {
+  animation-delay: -6s;
+  animation-duration: 14s;
+}
+
+.dvd-bounce-4 {
+  animation-delay: -9s;
+  animation-duration: 16s;
 } 

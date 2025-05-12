@@ -116,8 +116,163 @@ h1, h2, h3, h4, h5, h6 {
   min-width: 250px;
   margin: 0 1rem;
   position: relative;
+  z-index: 10;
 }
 
 .skill-card:hover {
   transform: scale(1.5);
+  z-index: 20;
+}
+
+.noise-overlay {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+  pointer-events: none;
+  user-select: none;
+  background-image: url('/noise.png');
+  background-repeat: repeat;
+  opacity: 0.18;
+  mix-blend-mode: soft-light;
+}
+
+/* Basic smooth scrolling */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px; /* Ensures sections don't get hidden behind the fixed navigation */
+}
+
+/* Remove problematic scroll styles
+* {
+  scroll-behavior: smooth !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  
+  * {
+    scroll-behavior: auto !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+*/
+
+/* Restore scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 40, 40, 0.5);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(255, 40, 40, 0.7);
+}
+
+/* For Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 40, 40, 0.5) rgba(0, 0, 0, 0.2);
+}
+
+section {
+  position: relative;
+  z-index: 5;
+  scroll-margin-top: 80px; /* Alternative approach for section positioning with fragment links */
+}
+
+.gradient-scroll {
+  pointer-events: none;
+  mix-blend-mode: soft-light;
+  z-index: 0;
+}
+
+/* Ensure interactive elements are above backgrounds */
+main {
+  position: relative;
+  z-index: 5;
+}
+
+/* Ensure navigation elements are above content */
+nav, .floating-nav {
+  z-index: 30;
+}
+
+/* Ensure modals and popups are at the top */
+.modal, .popup, .tooltip {
+  z-index: 40;
+}
+
+/* Scale utilities */
+.scale-102 {
+  transform: scale(1.02);
+}
+
+/* About section specific styles */
+#about {
+  isolation: isolate;
+  overflow: visible;
+}
+
+#about .parallax {
+  transform-style: preserve-3d;
+  will-change: transform;
+  overflow: visible !important;
+}
+
+#about p {
+  transform-origin: left center;
+  overflow: visible;
+}
+
+#about .grid > div {
+  transform-origin: center center;
+  overflow: visible;
+}
+
+/* Fix for hover effects causing text cutoff */
+.hover\:scale-102:hover {
+  transform: scale(1.02);
+  z-index: 30;
+  overflow: visible !important;
+}
+
+/* Ensure hover effects have space to expand */
+#about .p-4 {
+  overflow: visible;
+}
+
+#about .-m-4 {
+  overflow: visible;
+}
+
+/* Social Links Styles */
+.social-link {
+  position: relative;
+  overflow: hidden;
+}
+
+.social-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #ff2828;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease-out;
+}
+
+.social-link:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
 }

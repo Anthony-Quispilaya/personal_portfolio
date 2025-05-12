@@ -1,20 +1,10 @@
 import React from 'react';
+import DataVisualization from './DataVisualization';
 
 export default function DataVisualizationPlayground() {
   return (
-    <div className="space-y-6">
-      <h1 className="text-4xl font-bold mb-8">Data Visualization Playground</h1>
-      <div className="p-6 rounded-xl border border-white/20 bg-white/5">
-        <p className="text-gray-300 mb-4">
-          This is where your data visualization project will be embedded.
-          You can either:
-        </p>
-        <ul className="list-disc list-inside text-gray-300 space-y-2">
-          <li>Embed your existing data visualization project using an iframe</li>
-          <li>Create a simplified version specifically for the playground</li>
-          <li>Link to a live demo of your project</li>
-        </ul>
-      </div>
+    <div className="w-full mx-auto h-full">
+      <DataVisualization />
     </div>
   );
 } 
