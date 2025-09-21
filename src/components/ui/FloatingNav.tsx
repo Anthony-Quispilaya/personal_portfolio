@@ -107,7 +107,7 @@ const FloatingNav = () => {
                   onClick={(e) => item.id && handleItemClick(e, item.id)}
                   className={`
                     px-2 py-1 flex items-center gap-1 text-sm md:text-base transition-all duration-300 rounded-md relative
-                    ${isActive ? 'text-red-500 font-medium' : 'text-white/80 hover:text-white'}
+                    ${isActive ? 'text-red-500 font-medium' : 'text-white/80 hover:text-black'}
                   `}
                 >
                   <Icon className="h-4 w-4" />

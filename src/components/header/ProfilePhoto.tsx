@@ -20,9 +20,9 @@ export default function ProfilePhoto({ className = '', imageSrc = '/images/Antho
   }, []);
 
   return (
-    <div className={`absolute top-1/2 -translate-y-1/2 right-4 md:right-8 lg:right-12 xl:right-16 ${className}`}>
+    <div className={`relative ${className}`}>
       <motion.div 
-        className="w-[400px] h-[400px] rounded-b-5xl flex items-center justify-center overflow-visible shadow-2xl transform hover:scale-105 transition-transform duration-500"
+        className="w-56 h-56 sm:w-64 sm:h-64 md:w-72 md:h-72 lg:w-80 lg:h-80 xl:w-96 xl:h-96 rounded-2xl flex items-center justify-center overflow-hidden shadow-xl hover:scale-105 transition-transform duration-500"
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ 
           opacity: isLoaded ? 1 : 0, 
@@ -42,9 +42,9 @@ export default function ProfilePhoto({ className = '', imageSrc = '/images/Antho
             loading="eager"
             onError={(e) => {
               console.error('Error loading profile image');
-              e.currentTarget.src = '/images/fallback.png';
+              // Optional: add a static fallback asset
             }}
-            className="w-full h-full object-cover filter brightness-105 contrast-105 rounded-b-5xl"
+            className="w-full h-full object-cover"
           />
         ) : (
           <span className="text-white">Your Photo</span>

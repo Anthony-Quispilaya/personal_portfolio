@@ -26,5 +26,4 @@ export const aiChatbotScreenshots = [
   "/images/project-screenshots/project2/2.png",
   "/images/project-screenshots/project2/3.png",
   "/images/project-screenshots/project2/4.png",
-  "/images/project-screenshots/project2/5.png",
 ]; 

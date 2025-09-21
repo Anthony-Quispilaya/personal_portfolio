@@ -17,7 +17,7 @@ export default function Nav() {
   const pathname = usePathname();
 
   return (
-    <nav className="w-full flex justify-center gap-12 py-6 navbar-bg-color backdrop-blur-sm text-white sticky top-0 z-50 shadow-lg">
+  <nav className="w-full flex justify-center gap-12 py-6 navbar-bg-color backdrop-blur-sm sticky top-0 z-50 shadow-lg">
       {navItems.map((item) => {
         const isActive = pathname === item.href;
         return (

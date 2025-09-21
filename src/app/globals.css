@@ -1,20 +1,11 @@
 @import "tailwindcss";
 
 :root {
-  --background: #000000;
-  --foreground: #00cfb3;
+  --foreground: #000000;
+  --accent: #e20000;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@theme {
-  --radius-5xl: 6.5rem; 
-}
+/* Removed unsupported @theme at-rules for Tailwind v4 setup */
 
 @keyframes fadeIn {
   from {
@@ -60,6 +51,7 @@
 
 .skills-wrapper {
   overflow-x: auto;
+  overflow-y: hidden;
   width: 100%;
   position: relative;
   scroll-behavior: smooth;
@@ -79,18 +71,93 @@
   display: none;
 }
 
-body {
-  background: linear-gradient(rgb(17, 17, 17));
-  color: #fff;
+/* Base theme classes */
+.theme-light body {
+  background: linear-gradient(180deg, #f0f0f0 0%, #dedee4 100%);
+  color: #000;
   font-family: Arial, Helvetica, sans-serif;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  color: #ff2828;
+.theme-light h1, .theme-light h2, .theme-light h4, .theme-light h5, .theme-light h6 {
+  color: var(--accent);
+}
+
+.accent-red { color: var(--accent); }
+
+/* Light equivalents for previously dark styles so components don't need changes */
+.theme-light .navbar-bg-color { background-color: rgba(255,255,255,0.9); }
+.theme-light .text-white { color: #ffffff !important; }
+.theme-light .hover\:text-white:hover { color: #000 !important; }
+.theme-light .text-white\/80 { color: rgba(0,0,0,0.8) !important; }
+.theme-light .text-white\/60 { color: rgba(0,0,0,0.6) !important; }
+.theme-light .text-white\/90 { color: rgba(0,0,0,0.9) !important; }
+.theme-light .text-gray-300 { color: #374151; }
+.theme-light .text-gray-400 { color: #6b7280; }
+.theme-light .bg-black { background-color: #ffffff !important; }
+.theme-light .bg-black\/80 { background-color: rgba(255,255,255,0.8) !important; }
+.theme-light .bg-black\/50 { background-color: rgba(255,255,255,0.5) !important; }
+.theme-light .bg-black\/20 { background-color: rgba(0,0,0,0.08) !important; }
+.theme-light .bg-\[\#1a1a1a\] { background-color: #f7f7f7 !important; color: #000 !important; }
+.theme-light .bg-white\/5 { background-color: rgba(0,0,0,0.04) !important; }
+.theme-light .hover\:bg-white\/10:hover { background-color: rgba(0,0,0,0.06) !important; }
+.theme-light .border-white\/20 { border-color: rgba(0,0,0,0.12) !important; }
+.theme-light .border-white\/10 { border-color: rgba(0,0,0,0.1) !important; }
+.theme-light .hover\:shadow-white\/5:hover { --tw-shadow-color: rgba(0,0,0,0.05); }
+.theme-light .placeholder-gray-400::placeholder { color: #9ca3af; }
+.theme-light .backdrop-blur-\[2px\] { backdrop-filter: blur(2px); }
+.theme-light a:hover { color: var(--accent); }
+
+/* Reusable card styles */
+.theme-light .card {
+  background-color: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 0.75rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.theme-light .card-hover {
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.theme-light .card-hover:hover {
+  transform: scale(1.01);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  border-color: rgba(0,0,0,0.12);
+}
+.theme-light .bg-red-600 .text-white,
+.theme-light .bg-red-700 .text-white,
+.theme-light .bg-\[\#e20000\] .text-white,
+.theme-light .hover\:bg-\[\#ff4040\]:hover .text-white {
+  color: #ffffff !important;
+}
+/* Keep white text on red buttons when .text-white is on the same element */
+.theme-light .bg-red-600.text-white,
+.theme-light .bg-red-700.text-white,
+.theme-light .bg-\[\#ff2828\].text-white,
+.theme-light .hover\:bg-\[\#ff4040\]:hover.text-white {
+  color: #ffffff !important;
+}
+
+/* Buttons and chips that relied on white backgrounds */
+.theme-light .bg-white { background-color: #ffffff !important; }
+.theme-light .bg-white\/10 { background-color: rgba(0,0,0,0.06) !important; }
+.theme-light .bg-white\/50 { background-color: rgba(0,0,0,0.12) !important; }
+/* Arbitrary class names like text-[#ff2828] cannot be targeted directly */
+.theme-light .accent { color: var(--accent) !important; }
+
+/* Scrollbar colors for light theme */
+/* Removed theme-specific scrollbar styling to use default system scrollbars */
+
+h1, h2, h4, h5, h6 {
+  color: var(--accent);
+}
+
+h3 {
+  color: #000000;
 }
 
 .hero-keyword {
-  color: #ff2828;
+  color: var(--accent);
   font-weight: bold;
   animation: pulse 2s infinite;
 }
@@ -120,23 +187,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .skill-card:hover {
-  transform: scale(1.5);
+  transform: scale(1.05);
   z-index: 20;
 }
 
-.noise-overlay {
-  position: fixed;
-  inset: 0;
-  width: 100vw;
-  height: 100vh;
-  z-index: 1;
-  pointer-events: none;
-  user-select: none;
-  background-image: url('/noise.png');
-  background-repeat: repeat;
-  opacity: 0.18;
-  mix-blend-mode: soft-light;
-}
 
 /* Basic smooth scrolling */
 html {
@@ -144,43 +198,9 @@ html {
   scroll-padding-top: 80px; /* Ensures sections don't get hidden behind the fixed navigation */
 }
 
-/* Remove problematic scroll styles
-* {
-  scroll-behavior: smooth !important;
-}
 
-@media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
-  }
-  
-  * {
-    scroll-behavior: auto !important;
-    transition-duration: 0.001ms !important;
-  }
-}
-*/
 
-/* Restore scrollbar */
-::-webkit-scrollbar {
-  width: 10px;
-  background-color: rgba(0, 0, 0, 0.2);
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: rgba(255, 40, 40, 0.5);
-  border-radius: 5px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background-color: rgba(255, 40, 40, 0.7);
-}
-
-/* For Firefox */
-* {
-  scrollbar-width: thin;
-  scrollbar-color: rgba(255, 40, 40, 0.5) rgba(0, 0, 0, 0.2);
-}
+/* Removed global custom scrollbar styling to use defaults */
 
 section {
   position: relative;
@@ -266,7 +286,7 @@ nav, .floating-nav {
   left: 0;
   width: 100%;
   height: 2px;
-  background-color: #ff2828;
+  background-color: var(--accent);
   transform: scaleX(0);
   transform-origin: right;
   transition: transform 0.3s ease-out;

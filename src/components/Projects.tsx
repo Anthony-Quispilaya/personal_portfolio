@@ -38,9 +38,9 @@ const Projects = () => {
   return (
     <section id="projects" className="w-full py-32">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="p-8 max-w-7xl mx-auto">
+  <div className="p-8 max-w-7xl mx-auto">
           <ScrollAnimation amount={0.1}>
-            <h2 className="text-4xl font-bold text-white mb-12 text-center tracking-tight transition-transform duration-300 hover:scale-110">
+            <h2 className="text-4xl font-bold mb-12 text-center tracking-tight">
               Projects
             </h2>
           </ScrollAnimation>
@@ -48,14 +48,12 @@ const Projects = () => {
           <div className="grid grid-cols-1 gap-12">
             {projects.map((project, index) => (
               <ScrollAnimation key={index} direction="up" delay={0.2 + index * 0.1} amount={0.2}>
-                <div 
-                  className="p-8 rounded-xl border border-white/20 bg-white/5 backdrop-blur-[2px] hover:bg-white/10 transition-all duration-300 hover:scale-[1.02] hover:shadow-lg hover:shadow-white/5"
-                >
+                <div className="p-8 card card-hover">
                   <div className="grid grid-cols-1 lg:grid-cols-5 gap-8">
                     {/* Project Info */}
                     <div className="lg:col-span-2 space-y-6">
                       <ScrollAnimation direction="left" delay={0.1 + index * 0.05} amount={0.1}>
-                        <h3 className="text-2xl font-bold text-white flex items-center gap-3">
+                        <h3 className="text-2xl font-bold flex items-center gap-3">
                           <Image 
                             src={project.icon} 
                             alt={`${project.title} icon`}
@@ -65,7 +63,7 @@ const Projects = () => {
                           />
                           {project.title}
                         </h3>
-                        <p className="text-gray-300 leading-relaxed mt-3">{project.description}</p>
+                        <p className="leading-relaxed mt-3">{project.description}</p>
                       </ScrollAnimation>
                       
                       <ScrollAnimation direction="left" delay={0.2 + index * 0.05} amount={0.1}>
@@ -91,7 +89,7 @@ const Projects = () => {
                             return (
                               <span
                                 key={techIndex}
-                                className="px-3 py-1 bg-white/10 rounded-full text-sm text-white flex items-center gap-2"
+                                className="px-3 py-1 bg-white/10 rounded-full text-sm flex items-center gap-2"
                               >
                                 <Image
                                   src={`/icons/${iconName}.svg`}
@@ -113,14 +111,14 @@ const Projects = () => {
                             href={project.githubUrl}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="flex items-center gap-2 text-white hover:text-red-500 transition-colors duration-200"
+                            className="flex items-center gap-2 hover:text-red-500 transition-colors duration-200"
                           >
                             <FaGithub className="w-6 h-6" />
                             <span>View Code</span>
                           </a>
                           <a
                             href={project.playgroundUrl}
-                            className="text-white hover:text-red-500 transition-colors duration-200"
+                            className="hover:text-red-500 transition-colors duration-200"
                           >
                             Try it out →
                           </a>
@@ -129,7 +127,7 @@ const Projects = () => {
                     </div>
                     
                     <ScrollAnimation direction="right" delay={0.2 + index * 0.05} amount={0.15} className="lg:col-span-3 flex justify-center items-center">
-                      <div className="w-full aspect-[16/9] rounded-lg overflow-hidden border border-white/20">
+                      <div className="w-full aspect-[16/9] rounded-lg overflow-hidden border border-black/10">
                         {project.title === "Data Visualization" ? (
                           <Carousel images={dataVizScreenshots} />
                         ) : project.title === "Basic Volleyball Website" ? (

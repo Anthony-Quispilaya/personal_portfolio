@@ -30,7 +30,7 @@ const Carousel = ({ images }: CarouselProps) => {
   return (
     <div className="relative w-full h-full group">
       {/* Main Image */}
-      <div className="w-full h-full overflow-hidden rounded-lg flex items-start justify-center bg-black/20">
+      <div className="w-full h-full overflow-hidden rounded-lg flex items-start justify-center bg-[#f5f5f7] border border-black/10">
         <Image
           src={images[currentIndex]}
           alt={`Screenshot ${currentIndex + 1}`}
@@ -43,13 +43,13 @@ const Carousel = ({ images }: CarouselProps) => {
       {/* Navigation Arrows */}
       <button
         onClick={goToPrevious}
-        className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/50 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 hover:bg-black/70"
+        className="absolute left-2 top-1/2 -translate-y-1/2 bg-white/90 text-black p-2 rounded-full border border-black/10 shadow-md opacity-0 group-hover:opacity-100 transition-all duration-300 hover:bg-black hover:text-white"
       >
         <IoIosArrowBack className="w-6 h-6" />
       </button>
       <button
         onClick={goToNext}
-        className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 hover:bg-black/70"
+        className="absolute right-2 top-1/2 -translate-y-1/2 bg-white/90 text-black p-2 rounded-full border border-black/10 shadow-md opacity-0 group-hover:opacity-100 transition-all duration-300 hover:bg-black hover:text-white"
       >
         <IoIosArrowForward className="w-6 h-6" />
       </button>
@@ -61,7 +61,7 @@ const Carousel = ({ images }: CarouselProps) => {
             key={index}
             onClick={() => goToSlide(index)}
             className={`w-2 h-2 rounded-full transition-all duration-300 ${
-              index === currentIndex ? "bg-white scale-125" : "bg-white/50"
+              index === currentIndex ? "bg-black scale-125" : "bg-black/30"
             }`}
           />
         ))}

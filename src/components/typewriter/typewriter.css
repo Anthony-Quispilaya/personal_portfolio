@@ -24,7 +24,7 @@
 .typewriter-changing,
 .typewriter-highlight {
   font-weight: 700;
-  color: #ff2828;
+  color: var(--accent);
   position: relative;
 }
 
@@ -35,6 +35,6 @@
   left: 0;
   width: 100%;
   height: 2px;
-  background: #ff2828;
+  background: var(--accent);
   opacity: 0.3;
 } 

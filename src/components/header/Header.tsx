@@ -23,9 +23,9 @@ export default function Header() {
   const rotatingWords = ["digital", "meaningful", "interactive"];
   
   return (
-    <header className="w-full mt-30 flex items-center justify-center min-h-[400px] relative">
-      <div className="w-full max-w-7xl mx-auto px-4 flex items-center gap-8">
-        <div className="w-2/3">
+    <header className="w-full mt-30 flex items-center justify-center min-h-[400px]">
+      <div className="w-full max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 items-center gap-8">
+        <div className="md:col-span-2">
           <ClientOnly>
             <TypewriterEffect 
               staticTexts={staticTexts}
@@ -33,7 +33,7 @@ export default function Header() {
             />
           </ClientOnly>
         </div>
-        <div className="w-1/3 flex justify-end">
+        <div className="md:col-span-1 flex justify-center md:justify-end items-center">
           <ProfilePhoto />
         </div>
       </div>

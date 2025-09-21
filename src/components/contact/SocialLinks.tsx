@@ -10,7 +10,7 @@ const SocialLinks = () => {
         href="https://github.com/Anthony-Quispilaya"
         target="_blank"
         rel="noopener noreferrer"
-        className="group flex items-center gap-2 text-white hover:text-[#ff2828] transition-colors duration-300 social-link"
+        className="group flex items-center gap-2 hover:text-[#ff2828] transition-colors duration-300 social-link"
       >
         <FaGithub className="w-8 h-8 group-hover:scale-110 transition-transform duration-300" />
         <span className="text-lg font-medium">GitHub</span>
@@ -19,7 +19,7 @@ const SocialLinks = () => {
         href="https://linkedin.com/in/anthony-quispilaya"
         target="_blank"
         rel="noopener noreferrer"
-        className="group flex items-center gap-2 text-white hover:text-[#ff2828] transition-colors duration-300 social-link"
+        className="group flex items-center gap-2 hover:text-[#ff2828] transition-colors duration-300 social-link"
       >
         <FaLinkedin className="w-8 h-8 group-hover:scale-110 transition-transform duration-300" />
         <span className="text-lg font-medium">LinkedIn</span>
