@@ -40,7 +40,7 @@ export default function ProfilePhoto({ className = '', imageSrc = '/images/Antho
             quality={100}
             priority
             loading="eager"
-            onError={(e) => {
+            onError={() => {
               console.error('Error loading profile image');
               // Optional: add a static fallback asset
             }}

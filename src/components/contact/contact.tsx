@@ -45,8 +45,9 @@ export default function ContactForm() {
       }
       setResult({ ok: true, message: 'Message sent successfully. I will get back to you soon!', previewUrl: data.previewUrl });
       setFormData({ name: '', email: '', company: '', subject: '', message: '' });
-    } catch (err: any) {
-      setResult({ ok: false, message: err.message || 'Something went wrong. Please try again later.' });
+    } catch (err: unknown) {
+      const message = err instanceof Error ? err.message : 'Something went wrong. Please try again later.';
+      setResult({ ok: false, message });
     } finally {
       setSubmitting(false);
     }
