@@ -31,7 +31,7 @@ export default function About() {
                 <div className="p-4 -m-4 overflow-visible">
                   <p className="text-lg transition-transform duration-300 hover:scale-102 relative z-20 overflow-visible">
                     Outside of coding, you can usually find me playing video games, working on side projects, 
-                    or out on the volleyball court. I&apos;m proud to be Peruvian and a first-generation student in my family. 
+                    or out on the volleyball court. I&apos;m proud to be Peruvian American and a first-generation student in my family. 
                     I value spending time with my loved ones and pushing myself to keep learning and growing.
                   </p>
                 </div>
